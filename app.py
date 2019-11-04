@@ -93,7 +93,7 @@ def result():
     surprise_avg1 = data1.iloc[7]["average"]
     average1= data1.mean()
     
-    data2 = pd.read_csv(r"./result/video1.csv",names=["emotion","average"])
+    data2 = pd.read_csv(r"./result/video2.csv",names=["emotion","average"])
     anger_avg2 = data2.iloc[0]["average"]
     contempt_avg2 = data2.iloc[1]["average"]
     disgust_avg2 = data2.iloc[2]["average"]
@@ -104,7 +104,7 @@ def result():
     surprise_avg2 = data2.iloc[7]["average"]
     average2= data2.mean()
 
-    data3 = pd.read_csv(r"./result/video1.csv",names=["emotion","average"])
+    data3 = pd.read_csv(r"./result/video3.csv",names=["emotion","average"])
     anger_avg3 = data3.iloc[0]["average"]
     contempt_avg3 = data3.iloc[1]["average"]
     disgust_avg3 = data3.iloc[2]["average"]
