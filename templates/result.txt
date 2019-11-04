@@ -1,0 +1,6 @@
+    <!--put values in value1,2,3 to get result and remove comments -->
+    <!--{% if average1 < value1 || average2 < value2 || average3 < value3 %}
+    <h1>No Fatigue!</h1>
+    {% else %}
+    <h1>Fatigue detected!</h1>
+    {% endif %} -->

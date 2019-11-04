@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Fatigue detection</title>
+</head>
+<body>
+  <h1>Video 3</h1>
+<!-- Make sure ?enablejsapi=1 is on URL -->
+<iframe id="video" width="820" height="420" src="https://www.youtube.com/embed/dShqK3xEb18?enablejsapi=1" f000rameborder="0" allowfullscreen></iframe>
+<br>
+<input type="button" id="play-button" value="Play">
+<input type="button" id="pause-button" value="Pause">
+    <script>
+      // https://developers.google.com/youtube/iframe_api_reference
+      // global variable for the player
+      var player;
+      // this function gets called when API is ready to use
+      function onYouTubePlayerAPIReady() {
+        // create the global player from the specific iframe (#video)
+        player = new YT.Player('video', {
+          events: {
+            // call this function when player is ready to use
+            'onReady': onPlayerReady
+          }
+        });
+      }
+      function onPlayerReady(event) {
+        // bind events
+        var playButton = document.getElementById("play-button");
+        playButton.addEventListener("click", function() {
+          player.playVideo();
+        });
+        var pauseButton = document.getElementById("pause-button");
+        pauseButton.addEventListener("click", function() {
+          player.pauseVideo();
+        }); 
+      }
+      // Inject YouTube API script
+      var tag = document.createElement('script');
+      tag.src = "//www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+    <h1><a href="/result">Result</h1>
+</body>
+</html>

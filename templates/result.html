@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <h2>Video1</h2>
+    <img src="{{url_for('static',filename='video2.png')}}" alt="video1">
+    <h4>Anger: {{anger_avg1}}</h4>
+    <h4>Contempt: {{contempt_avg1}}</h4>
+    <h4>Disgust: {{disdust_avg1}}</h4>
+    <h4>Fear: {{fear_avg1}}</h4>
+    <h4>Happiness: {{happiness_avg1}}</h4>
+    <h4>Neutral: {{neutral_avg1}}</h4>
+    <h4>Sadness: {{sadness_avg1}}</h4>
+    <h4>Surprise: {{surprise_avg1}}</h4>
+    <h2>Video2</h2>
+    <img src="{{url_for('static',filename='video2.png')}}" alt="video2" />
+    <h4>Anger: {{anger_avg2}}</h4>
+    <h4>Contempt: {{contempt_avg2}}</h4>
+    <h4>Disgust: {{disdust_avg2}}</h4>
+    <h4>Fear: {{fear_avg2}}</h4>
+    <h4>Happiness: {{happiness_avg2}}</h4>
+    <h4>Neutral: {{neutral_avg2}}</h4>
+    <h4>Sadness: {{sadness_avg2}}</h4>
+    <h4>Surprise: {{surprise_avg2}}</h4>
+    <h2>Video3</h2>
+    <img src="{{url_for('static',filename='video2.png')}}" alt="video3">
+    <h4>Anger: {{anger_avg3}}</h4>
+    <h4>Contempt: {{contempt_avg3}}</h4>
+    <h4>Disgust: {{disdust_avg3}}</h4>
+    <h4>Fear: {{fear_avg3}}</h4>
+    <h4>Happiness: {{happiness_avg3}}</h4>
+    <h4>Neutral: {{neutral_avg3}}</h4>
+    <h4>Sadness: {{sadness_avg3}}</h4>
+    <h4>Surprise: {{surprise_avg3}}</h4>
+    <!--{{average1}}{{average2}}{{average3}}-->
+    <!--Make a nested loop acordingly comparing all the three averages-->
+    {% if (average1 < 0.500).bool() or (average2 < 0.500).bool() or (average3 < 0.500).bool() %}
+        <h1>No Fatigue!</h1>
+    {% else %}
+        <h1>Fatigue detected!</h1>
+    {% endif %}
+   
+</body>
+</html>
